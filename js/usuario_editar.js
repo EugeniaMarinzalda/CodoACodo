@@ -1,13 +1,13 @@
-console.log(location.search)     // lee los argumentos pasados a este formulario
-var id=location.search.substr(4)  // producto_update.html?id=1
-console.log(id)
+console.log(location.search);     // lee los argumentos pasados a este formulario
+var id=location.search.substr(4);  // producto_update.html?id=1
+console.log(id);
 
 const { createApp } = Vue;
 
 createApp({
   data() {
     return {
-        url:"http://pysebas.pythonanywhere.com/usuarios" + id,
+        url:"http://pysebas.pythonanywhere.com/usuarios/" + id,
         nombre:'',
         email:'',
         password:'',
@@ -21,7 +21,7 @@ createApp({
   methods: {
     async dataFetch() {
         try {
-           const res =  await fetch(url);
+           const res =  await fetch(this.url);
            if (!res.ok) {
                throw new Error('mala respuesta de red');    
            }
@@ -50,7 +50,7 @@ createApp({
             redirect: 'follow'
             };
     
-            const res = await fetch(url, options);
+            const res = await fetch(this.url, options);
     
             if (!res.ok){
                 throw new Error(`Error:${res.status}`);
@@ -63,7 +63,7 @@ createApp({
             };
         
             } catch (error) {
-            alert("Error al Grabar");
+            alert(`Error al Grabar ${error.name}`);
         
             };
        } 
