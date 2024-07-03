@@ -229,13 +229,14 @@ nav {
     flex-wrap: wrap;
 }
 
-.texto,
-.imagen-home {
+.texto
+{
     flex: 1 1 100%;
 }
 
 .imagen-home {
     margin-top: 20px;
+    width: 400px;
 }
 
 @media (min-width: 768px) {
