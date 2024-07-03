@@ -1,99 +1,61 @@
-<doctype html>
-
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 
 <head>
-
-  <title>modificar usuario</title>
-
-  <meta charset="utf-8">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS v5.2.1 -->
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar usuario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style-registro.css">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
 </head>
 
 <body>
 
-  <header id="header">
+    <section class="form-wrapper">
 
-    <!-- place navbar here -->
+        <div class="back-to-home-container">
+            <button onclick="redireccionar()" class="back-to-home"><i class="fa-solid fa-circle-xmark"></i></button>
+        </div>
 
-  </header>
+        <form id="login-form" class="form-content" onsubmit="event.preventDefault(); modificar();">
 
-  <main>
+            <h2>Editar Usuario</h2>
+            <br>
 
-    <div class="container" id="app">
+            <div class="form-control">
+                <input type="text" name="nombre" id="nombre" placeholder="Usuario" v-model="nombre">
+            </div>
 
-      <form style="background-color: aliceblue;margin:10px auto ; width: 400px; padding: 20px;">
+            <div class="form-control">
+                <input type="text" name="email" id="email" v-model="email" placeholder="Correo Electronico">
+            </div>
 
-      <h2>Editar Usuario </h2>
+            <div class="form-control">
+                <input type="text" name="password" id="password" v-model="password" placeholder="Contraseña">
+            </div>
 
-           <div class="mb-3">
+            <input class="grabar" type="button" value="Editar" v-on:click="modificar()">
 
-        <label for="id">Id</label>
+        </form>
 
-        <input type="number" name="id" id="id" disabled v-model="id" >
+        <div class="form-volver">
+            <a href="./index.html" class="volver">Volver</a>
+        </div>
 
-      </div>
+        <div class="form-help">
+            <a href="./index.html#contact">Necesitas ayuda?</a>
+        </div>
 
-      <div class="mb-3">
+    </section>
 
-        <label for="nombre">Nombre</label>
-
-        <input type="text" name="nombre" id="nombre" v-model="nombre">
-
-      </div>
-
-      <div class="mb-3">
-
-        <label for="email">Email</label>
-
-        <input type="text" name="email" id="email" v-model="email">
-
-      </div>
-
-      <div class="mb-3">
-
-        <label for="password">Password</label>
-
-        <input type="text" name="password" id="password" v-model="password">
-
-      </div>
-
-      <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
-
-      </form>
-
-    </div>
-
-  </main>
-
-  <footer>
-
-    <!-- place footer here -->
-
-  </footer>
-
-  <!-- Bootstrap JavaScript Libraries -->
-
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"> </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"> </script>
-
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
-  <script src="./js/usuario_editar.js"></script>
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/vue.js"></script>
+    <script src="./js/registro.js"></script>
+    <script src="./js/usuario_editar.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </body>
 
 </html>
