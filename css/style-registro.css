@@ -111,7 +111,13 @@ input[type="password"]::placeholder {
 
 }
 
-.registrarse{
+.registrarse, .volver{
+    display: block;
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.registrarse, .grabar{
     background-color: #f8b1b0;
     color: #fff;
     border: none;
@@ -120,7 +126,7 @@ input[type="password"]::placeholder {
     font-size: 14px;
     transition: all .5s ease;
 }
- .registrarse:hover{
+ .registrarse:hover, .grabar:hover{
     background-color: #fff;
     color: #f8b1b0;
     border: 2px solid  #f8b1b0 ;
@@ -146,4 +152,5 @@ input[type="password"]::placeholder {
     color: #fff;
     border: 2px solid  #f8b1b0 ;
  }
+
 

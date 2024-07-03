@@ -1,13 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
-    const headerContainer = document.getElementById( 'header-container');
-    
+    const headerContainer = document.getElementById('header-container');
+
+    // Contenido del encabezado
     const headerHtml = `
         <a href="index.html">
             <img class="logo" src="./img/ODUJEN1.svg" alt="logo">
         </a>
-        
-        <div id="saludo"></div>
         
         <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
         
@@ -21,39 +19,58 @@ document.addEventListener('DOMContentLoaded', function () {
                 <li>
                     <a class="btn" href="registro.html" id="login-link">
                         <i class="fas fa-sign-in-alt login-icon"></i>
-                        <span id="login-text" class="login-text">Iniciar Sesion</span>
+                        <span id="login-text" class="login-text"></span>
                     </a>
                 </li>
             </ul>
-        </nav>` ;
-        
-    headerContainer.innerHTML = headerHtml;
-    
-    
-    const msjSaludo = document.querySelector('#saludo');
+        </nav>`;
 
-if (localStorage.getItem('user')){
-        msjSaludo.innerHTML=`Hola ${localStorage.getItem('user')} <button id="sesion-off">Cerrar sesion<button/>`;
-        
-    const sesionOff = document.querySelector('#sesion-off');
-        
-    seOff = () => {
-            localStorage.removeItem('user');
-            window.location.href ='index.html';
-    };
-        
-    sesionOff.onclick = seOff;
-};
-    
+    headerContainer.innerHTML = headerHtml;
+
+    // Verificar estado de sesión y actualizar texto del enlace de inicio de sesión
+    const loginLink = document.getElementById('login-link');
+    const loginText = document.getElementById('login-text');
+
+    if (localStorage.getItem('user')) {
+        loginText.innerHTML = `${localStorage.getItem('user')}`;
+        loginLink.href = 'admin.html'; 
+    } else {
+        loginText.innerHTML = `<a href="registro.html">Iniciar Sesión</a>`;
+        loginLink.href = 'registro.html'; 
+    }
+
+    // Menú hamburguesa
     const abrirMenuBtn = document.getElementById('abrir');
     const cerrarMenuBtn = document.getElementById('cerrar');
     const nav = document.getElementById('nav');
 
-    abrirMenuBtn.addEventListener('click', function() {
+    abrirMenuBtn.addEventListener('click', function () {
         nav.classList.add('visible');
     });
 
-    cerrarMenuBtn.addEventListener('click', function() {
+    cerrarMenuBtn.addEventListener('click', function () {
         nav.classList.remove('visible');
     });
+
+    // Desplazamiento suave del scroll para enlaces internos en index.html
+    if (window.location.pathname.includes('index.html')) {
+        const header = document.querySelector('header');
+        const headerHeight = header ? header.offsetHeight : 0;
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight - 30;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    }
 });

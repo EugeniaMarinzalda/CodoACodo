@@ -19,11 +19,10 @@ function pressBackward() {
     carousel.style.transform = `translateX(${currentPosition}px)`;
 }
 
-
-btnForward.addEventListener('click', pressForward);
-
-btnBackward.addEventListener('click', pressBackward);
-
+if (btnForward && btnBackward) {
+    btnForward.addEventListener('click', pressForward);
+    btnBackward.addEventListener('click', pressBackward);
+} 
 /*Menu hamburguesa*/
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -131,7 +130,6 @@ btnContact.onclick = (event) => {
 };
 
 
-
 /*Registro*/
 
 function redireccionar() {
@@ -154,47 +152,9 @@ function returnToHomePage() {
 }
 
 
-/*Para cambiar el boton de registro de sesión*/
 
-document.addEventListener('DOMContentLoaded', function () {
-    const loginLink = document.getElementById('login-link');
-    const loginText = document.getElementById('login-text');
 
-    const isLoggedIn = localStorage.getItem('isLoggedIn');
 
-    if (isLoggedIn) {
-        loginText.textContent = 'Cerrar Sesión';
-        loginLink.onclick = function () {
-            localStorage.removeItem('isLoggedIn');
-            location.reload();
-        };
-    } else {
-        loginText.textContent = 'Iniciar Sesión';
-        loginLink.href = 'registro.html';
-    }
-});
 
-/* Desplazamiento del scroll ajustado por header siempre que este en página index.html*/
 
-document.addEventListener('DOMContentLoaded', function () {
-    const header = document.querySelector('header');
-    const headerHeight = header ? header.offsetHeight : 0;
 
-    document.querySelectorAll('a[href^="index.html#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').split('#')[1];
-
-            if (targetId) {
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight - 30;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-});

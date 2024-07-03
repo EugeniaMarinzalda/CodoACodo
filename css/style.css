@@ -1002,5 +1002,54 @@ footer {
     }
 }
 
+/* Tabla del admin */
 
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    padding: 8px;
+    white-space: nowrap;
+}
+
+.table thead th {
+    background-color: #f8b1b0;
+    font-weight: bold;
+}
+
+.btnModificar, .btnEliminar {
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btnModificar, .btnEliminar:hover, #btnCerrarAdm:hover {
+    background-color: #ccc; 
+    color: black;
+    text-decoration: none;
+}
+
+.btnEliminar, .btnModificar:hover, #btnCerrarAdm{
+    background-color: #f8b1b0; 
+    color: white;
+}
+
+#btnCerrarAdm {
+    width: 200px; 
+    margin: 20px auto; 
+    padding: 10px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  
+}
 
