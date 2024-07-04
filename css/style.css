@@ -1032,25 +1032,23 @@ footer {
     border-radius: 4px;
 }
 
-.btnModificar, .btnEliminar:hover, #btnCerrarAdm:hover {
+.btnModificar, .btnEliminar:hover, #btnCerrarAdm, #btnNuevo:hover {
     background-color: #ccc; 
     color: black;
     text-decoration: none;
 }
 
-.btnEliminar, .btnModificar:hover, #btnCerrarAdm{
+.btnEliminar, .btnModificar:hover, #btnCerrarAdm:hover, #btnNuevo{
     background-color: #f8b1b0; 
     color: white;
 }
 
-#btnCerrarAdm {
+#btnCerrarAdm, #btnNuevo {
     width: 200px; 
-    margin: 20px auto; 
+    margin: 10px auto; 
     padding: 10px;
     text-align: center;
     border: none;
     cursor: pointer;
     border-radius: 4px;
-  
 }
-

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <section id="app" class="form-wrapper">
 
         <div class="back-to-home-container">
@@ -34,15 +34,18 @@
             <div class="form-control">
                 <input type="text" name="password" id="password" v-model="password" placeholder="Contraseña">
             </div>
-            
+
             <div class="form-control">
                 <input type="text" name="rol" id="rol" v-model="rol" placeholder="rol">
             </div>
 
             <button class="grabar" type="button" v-on:click="modificar()">Editar</button>
 
+
         </form>
 
+        <div id="evento"></div>
+        
         <div class="form-volver">
             <a href="./index.html" class="volver">Volver</a>
         </div>
@@ -56,7 +59,7 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/usuario_editar.js"></script>
-    
+
 </body>
 
 </html>

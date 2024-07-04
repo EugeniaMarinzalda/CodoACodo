@@ -27,9 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.removeItem('user'); 
             window.location.href = 'index.html';
         });
-    } else {
-        console.error('No se encontró el botón de cerrar sesión');
-    }
+    } 
 
     
 });

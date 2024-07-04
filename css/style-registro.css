@@ -139,3 +139,8 @@ input[type="password"]::placeholder {
     margin: 20px auto;
     width: 40%;
 }
+
+#evento {
+    margin: 20px auto;
+    text-align: center;
+}
