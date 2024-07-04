@@ -52,7 +52,8 @@ body {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+select {
     width: calc(100% - 25px); 
     padding: 10px;
     border: 2px solid #ccc;

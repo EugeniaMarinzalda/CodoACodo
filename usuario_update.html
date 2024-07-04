@@ -36,7 +36,11 @@
             </div>
 
             <div class="form-control">
-                <input type="text" name="rol" id="rol" v-model="rol" placeholder="rol">
+                <select name="rol" id="rol" v-model="rol">
+                    <option value="" disabled selected>Seleccionar rol</option>
+                    <option value="user">Usuario</option>
+                    <option value="admin">Administrador</option>
+                </select>
             </div>
 
             <button class="grabar" type="button" v-on:click="modificar()">Editar</button>
