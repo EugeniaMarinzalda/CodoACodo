@@ -111,46 +111,31 @@ input[type="password"]::placeholder {
 
 }
 
-.registrarse, .volver{
+.registrarse, .volver, .grabar {
     display: block;
-    margin: 0 auto; 
+    margin: auto; 
     text-align: center; 
+    width: 60%;
+    padding: 10px 15px; 
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.5s ease;
 }
 
-.registrarse, .grabar{
-    background-color: #f8b1b0;
+.registrarse, .volver:hover, .grabar {
     color: #fff;
-    border: none;
-    border-radius: 35px;
-    padding: 10px 15px;
-    font-size: 14px;
-    transition: all .5s ease;
+    background-color: #f8b1b0;
+    border-color:  #f8b1b0;
 }
- .registrarse:hover, .grabar:hover{
+
+.registrarse:hover, .volver, .grabar:hover {
     background-color: #fff;
     color: #f8b1b0;
-    border: 2px solid  #f8b1b0 ;
- }
-
+    border-color: #ccc;
+}
 
 .form-volver {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    width: 40%;
 }
-
-.volver{
-    background-color: #fff;
-    color: #f8b1b0;
-    border: none;
-    border-radius: 35px;
-    padding: 10px 15px;
-    font-size: 14px;
-    transition: all .5s ease;
-}
- .volver:hover{
-    background-color: #f8b1b0;
-    color: #fff;
-    border: 2px solid  #f8b1b0 ;
- }
-
-
