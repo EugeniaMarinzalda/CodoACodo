@@ -11,14 +11,14 @@
 </head>
 
 <body>
-
-    <section class="form-wrapper">
+    
+    <section id="app" class="form-wrapper">
 
         <div class="back-to-home-container">
             <button onclick="redireccionar()" class="back-to-home"><i class="fa-solid fa-circle-xmark"></i></button>
         </div>
 
-        <form id="login-form" class="form-content" onsubmit="event.preventDefault(); modificar();">
+        <form id="login-form" class="form-content">
 
             <h2>Editar Usuario</h2>
             <br>
@@ -34,8 +34,12 @@
             <div class="form-control">
                 <input type="text" name="password" id="password" v-model="password" placeholder="Contraseña">
             </div>
+            
+            <div class="form-control">
+                <input type="text" name="rol" id="rol" v-model="rol" placeholder="rol">
+            </div>
 
-            <input class="grabar" type="button" value="Editar" v-on:click="modificar()">
+            <button class="grabar" type="button" v-on:click="modificar()">Editar</button>
 
         </form>
 
@@ -51,11 +55,8 @@
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/script.js"></script>
-    <script src="./js/login.js"></script>
-    <script src="./js/vue.js"></script>
-    <script src="./js/registro.js"></script>
     <script src="./js/usuario_editar.js"></script>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
 </body>
 
 </html>

@@ -11,6 +11,7 @@ createApp({
         nombre:'',
         email:'',
         password:'',
+        rol:'',
         error:false,
         cargando:true,
     };
@@ -29,6 +30,7 @@ createApp({
            this.nombre = data.nombre;
            this.email = data.email;
            this.password = data.password;
+           this.rol=data.rol;
            this.cargando = false;
         } catch(error) {
             console.error("Error fetching data:", error);
@@ -41,6 +43,7 @@ createApp({
             nombre: this.nombre,
             email: this.email,
             password: this.password,
+            rol: this.rol,
             };
 
             var options = {
@@ -63,7 +66,7 @@ createApp({
             };
         
             } catch (error) {
-            alert(`Error al Grabar ${error.name}`);
+            alert(`Error al Grabar ${error.message}`);
         
             };
        } 

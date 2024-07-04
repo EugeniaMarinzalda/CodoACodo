@@ -45,6 +45,7 @@
                                     <th>Nombre</th>
                                     <th>Email</th>
                                     <th>Password</th>
+                                    <th>Rol</th>
                                     <th colspan="2">Acciones</th>
                                 </tr>
                             </thead>
@@ -54,6 +55,7 @@
                                     <td>{{usuario.nombre}}</td>
                                     <td>{{usuario.email}}</td>
                                     <td>{{usuario.password}}</td>
+                                    <td>{{usuario.rol}}</td>
                                     <td>
                                         <a id="btnModificar" class="btnModificar"
                                             :href="'usuario_update.html?id='+ usuario.id">Editar</a>
