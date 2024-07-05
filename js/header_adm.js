@@ -12,18 +12,21 @@ document.addEventListener('DOMContentLoaded', function () {
         <nav class="nav" id="nav">
             <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
             <ul class="nav-list">
-                <li><a href="index.html#sec-servi">Tratamientos</a></li>
-                <li><a href="index.html#staff">Profesionales</a></li>
-                <li><a href="index.html#contact">Contáctanos</a></li>
-                <li><a href="index.html#branch">Locales</a></li>
-                <li>
-                    <a class="btn" href="registro.html" id="login-link">
-                        <i class="fas fa-sign-in-alt login-icon"></i>
-                        <span id="login-text" class="login-text"></span>
-                    </a>
+                 <select class="nav-select" id="navSelect" onchange="navigateToPage()">
+            <option value="">Selecciona una opción</option>
+            <option value="admin.html">Usuarios</option>
+            <option value="tratamientos.html">Tratamientos</option>
+        </select>
+                    <a class="btn" href="index.html" id="logout-link">
+            <i class="fas fa-sign-out-alt"></i>
+            Cerrar sesión
+        </a>
                 </li>
             </ul>
         </nav>`;
+
+
+        
 
     headerContainer.innerHTML = headerHtml;
 
@@ -73,4 +76,16 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+});
+
+function navigateToPage() {
+    var select = document.getElementById("navSelect");
+    var selectedValue = select.value;
+    if (selectedValue) {
+        window.location.href = selectedValue;
+    }
+}
+
+document.getElementById("cerrar").addEventListener("click", function() {
+    document.getElementById("nav").style.display = "none";
 });
