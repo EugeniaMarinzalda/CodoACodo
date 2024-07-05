@@ -3,7 +3,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            tratamientos: [],  // Asegúrate de que esta propiedad sea usada en el HTML
+            tratamientos: [],
             url: 'https://lorenacantella.pythonanywhere.com/tratamientos',
             error: false,
             cargando: true,
@@ -12,7 +12,8 @@ createApp({
             descripcion: "",
             duracion: "",
             dia_semana: "",
-            hora: ""
+            hora: "",
+            whatsappNumber: '1234567890'  // Reemplaza con el número de teléfono de WhatsApp
         }
     },
     methods: {
@@ -58,6 +59,11 @@ createApp({
                     console.error(err);
                     alert("Error al Grabar");
                 });
+        },
+        turno(elemento) {
+            const message = `Hola, me gustaría pedir un turno para el tratamiento: ${elemento.nombre}.`;
+            const url = `https://wa.me/${this.whatsappNumber}?text=${encodeURIComponent(message)}`;
+            window.location.href = url;
         }
     },
     created() {
