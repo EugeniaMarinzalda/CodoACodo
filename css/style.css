@@ -32,6 +32,7 @@ main {
     width: 80%;
     overflow: hidden;
     margin: auto;
+    box-shadow: #797777;
 }
 
 /* --------Header-------- */
@@ -1002,68 +1003,4 @@ footer {
         padding: 1rem; 
          
     }
-}
-
-/* Tabla del admin */
-
-.table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.table th, .table td {
-    text-align: center;
-    vertical-align: middle;
-    border: 1px solid #ddd;
-    padding: 8px;
-    white-space: nowrap;
-}
-
-.table thead th {
-    background-color: #f8b1b0;
-    font-weight: bold;
-}
-
-.btnModificar, .btnEliminar {
-    width: 100%;
-    padding: 8px;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-.btnModificar, .btnEliminar:hover, #btnCerrarAdm, #btnNuevo:hover {
-    background-color: #ccc; 
-    color: black;
-    text-decoration: none;
-}
-
-.btnEliminar, .btnModificar:hover, #btnCerrarAdm:hover, #btnNuevo{
-    background-color: #f8b1b0; 
-    color: white;
-}
-
-#btnCerrarAdm, #btnNuevo {
-    width: 200px; 
-    margin: 10px auto; 
-    padding: 10px;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-select {
-    width: calc(100% - 25px); 
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 35px;
-    font-size: 16px;
-    float: left; 
-    outline: none; 
-    background-color: #fff; 
-    transition: background-color 0.3s; 
-    transition: border-color 0.3s;
-  
 }

@@ -29,8 +29,8 @@ main {
     grid-area: main;
     width: 80%;
     overflow: hidden;
-    margin: 20px auto;
-    border-radius: 15px;
+    margin: auto;
+
     box-shadow: #797777;
 }
 
@@ -44,7 +44,7 @@ main {
 }
 
 #titulo_tabla{
-    margin: 25px;
+    margin: 25px 15px;
     font-size: 36x;
 }
 
@@ -65,7 +65,7 @@ main {
     border-collapse: collapse;
     margin: 10px 0;
     font-size: 14px;
-    text-align: left;
+    text-align: center;
     
 }
 
@@ -118,13 +118,13 @@ main {
 }
 
 .btns-outline-danger {
-    color: #dc3545;
-    border-color: #dc3545;
+    color: #f8b1b0;
+    border-color: #f8b1b0;
     background-color: transparent;
 }
 
 .btns-outline-danger:hover {
-    background-color: #dc3545;
+    background-color: #f8b1b0;
     color: #fff;
 }
 
