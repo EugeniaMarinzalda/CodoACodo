@@ -65,6 +65,7 @@ nav {
 
 .login-text {
     color: #ffffff;
+    text-align: center;
 }
 
 .login-text:hover {
@@ -1051,4 +1052,18 @@ footer {
     border: none;
     cursor: pointer;
     border-radius: 4px;
+}
+
+select {
+    width: calc(100% - 25px); 
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 35px;
+    font-size: 16px;
+    float: left; 
+    outline: none; 
+    background-color: #fff; 
+    transition: background-color 0.3s; 
+    transition: border-color 0.3s;
+  
 }

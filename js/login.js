@@ -23,7 +23,7 @@ async function validarUsuario(nombre,password){
     if(user){
         if(user.rol === 'admin'){
             localStorage.setItem('user',nombre);
-            window.location.href = "admin.html";
+            window.location.href = "ofertateturno.html";
         }else{
             localStorage.setItem('user',nombre);
             redireccionar();    

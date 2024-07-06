@@ -9,24 +9,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header id="header-container" class="header-container">
-    </header>
+    <header id="header-container" class="header-container"></header>
 
     <main>
         <div class="contenedorT">
             <h1 id="usuario"></h1>
             <br>
         </div>
-        
+
         <div id="vue-user" class="container">
-    <div v-if="error">
+            <div v-if="error">
                 <p>Lo sentimos, en este momento no podemos mostrarte el contenido. Intente nuevamente más tarde.</p>
             </div>
 
@@ -38,7 +38,7 @@
 
                 <section v-else>
                     <div class="table-responsive">
-                    <!-- <div class="table-responsive" v-if="usuario."> -->
+                        <!-- <div class="table-responsive" v-if="usuario."> -->
                         <table class="table">
                             <thead>
                                 <tr>
@@ -84,13 +84,13 @@
                 </div>
 
             </div>
-            </div>    
-    
-    <!-- seccion tratamientos -->
-    
-    <div id="app" class="container">
+        </div>
+
+        <!-- seccion tratamientos -->
+
+        <div id="app" class="container">
             <div class="app-container">
-                <h1 id="titulo_tabla" >Tratamientos</h1>
+                <h1 id="titulo_tabla">Tratamientos</h1>
                 <a class="btns btns-outline-primary btn-lg" href="tratamiento_nuevo.html">Nuevo</a>
             </div>
             <div v-if="error">
@@ -124,8 +124,10 @@
                                     <td>{{ tratamiento.dia_semana }}</td>
                                     <td>{{ tratamiento.hora }}</td>
                                     <td>
-                                        <a class="btns btns-outline-success" :href="'tratamiento_update.html?id=' + tratamiento.id">Editar</a>
-                                        <button type="button" class="btns btns-outline-danger" @click="eliminar(tratamiento.id)">Eliminar</button>
+                                        <a class="btns btns-outline-success"
+                                            :href="'tratamiento_update.html?id=' + tratamiento.id">Editar</a>
+                                        <button type="button" class="btns btns-outline-danger"
+                                            @click="eliminar(tratamiento.id)">Eliminar</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -134,23 +136,23 @@
                 </section>
             </div>
         </div>
-    
-    
-    
+
+
+
     </main>
 
     <footer id="footer-container" class="footer"></footer>
 
-    
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/vue-admin.js"></script>
-    
-    <script src="./js/header.js"></script>
+
+
     <script src="./js/footer.js"></script>
     <script src="./js/admin.js"></script>
     <script src="./js/tratamiento.js"></script>
     <script src="./js/header_adm.js"></script>
-    
+
 </body>
 
 </html>

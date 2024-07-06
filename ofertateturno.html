@@ -20,31 +20,9 @@
 
 <body>
 
-    <header>
-        <a href="index.html">
-            <img class="logo" src="./img/ODUJEN1.svg" alt="logo">
-        </a>
+    <header id="header-container" class="header-container"></header>
 
-        <div id="saludo"></div>
 
-        <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
-
-        <nav class="nav" id="nav">
-            <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
-            <ul class="nav-list">
-                <li><a href="index.html#sec-servi">Tratamientos</a></li>
-                <li><a href="index.html#staff">Profesionales</a></li>
-                <li><a href="index.html#contact">Contáctanos</a></li>
-                <li><a href="index.html#branch">Locales</a></li>
-                <li>
-                    <a class="btn" href="index.html" id="login-link">
-                        <i class="fas fa-sign-in-alt login-icon"></i>
-                        <span id="login-text" class="login-text">Cerrar Sesion</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
     <main>
         <div id="app">
             <div v-if="error">
@@ -55,6 +33,12 @@
                     <div class="spinner-border"></div>
                     <p>Cargando...</p>
                 </section>
+
+                <div class="contenedorT">
+                    <h2 id="usuario"></h2>
+                    <br>
+                </div>
+
                 <section id="presentacion" class="marco">
                     <div class="imagen-home">
                         <img style="width: 400px;" src="./img/foto-about.png"
@@ -84,9 +68,10 @@
             </div>
         </div>
     </main>
-    <footer>
-        <!-- place footer here -->
-    </footer>
+
+    <script src="./js/footer.js"></script>
+
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -97,8 +82,11 @@
 
 
     <script src="./js/tratamiento.js"></script>
-    <script src="./js/main.js"></script>
-    
+
+    <script src="./js/turno.js"></script>
+    <script src="./js/header_adm.js"></script>
+    <script src="./js/footer.js"></script>
+
 </body>
 
 </html>

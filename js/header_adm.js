@@ -6,27 +6,24 @@ document.addEventListener('DOMContentLoaded', function () {
         <a href="index.html">
             <img class="logo" src="./img/ODUJEN1.svg" alt="logo">
         </a>
-        
+
         <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
-        
+
         <nav class="nav" id="nav">
             <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
             <ul class="nav-list">
-                 <select class="nav-select" id="navSelect" onchange="navigateToPage()">
-            <option value="">Selecciona una opción</option>
-            <option value="admin.html">Usuarios</option>
-            <option value="tratamientos.html">Tratamientos</option>
-        </select>
-                    <a class="btn" href="index.html" id="logout-link">
-            <i class="fas fa-sign-out-alt"></i>
-            Cerrar sesión
-        </a>
-                </li>
+                <select class="nav-select" id="navSelect" onchange="navigateToPage()">
+                    <option value="">Selecciona una opción</option>
+                    <option value="ofertateturno.html">Turnos</option>
+                    <option value="admin.html">Usuarios</option>
+                    <option value="tratamientos.html">Tratamientos</option>
+                </select>
+                <a class="btn" href="registro.html" id="login-link">
+                        <i class="fas fa-sign-in-alt login-icon"></i>
+                        <span id="login-text" class="login-text"></span>
+                </a>
             </ul>
         </nav>`;
-
-
-        
 
     headerContainer.innerHTML = headerHtml;
 
@@ -35,8 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const loginText = document.getElementById('login-text');
 
     if (localStorage.getItem('user')) {
-        loginText.innerHTML = `${localStorage.getItem('user')}`;
-        loginLink.href = 'admin.html'; 
+        loginText.innerHTML = `Cerrar Sesión`;
+
+        loginLink.addEventListener('click', function () {
+            localStorage.removeItem('user'); 
+            window.location.href = 'index.html';
+        });
+        
     } else {
         loginText.innerHTML = `Iniciar Sesión`;
         loginLink.href = 'registro.html'; 

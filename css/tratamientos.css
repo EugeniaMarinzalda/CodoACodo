@@ -180,6 +180,7 @@ nav {
 
 .login-text {
     color: #ffffff;
+    text-align: center;
 }
 
 .login-text:hover {
@@ -338,4 +339,175 @@ nav {
     font-size: 14px;
     border-radius: 10px;
     border: 1px solid #ccc;
+}
+
+/* -------- Footer -------- */
+
+footer {
+    background-color: #f8b1b0;
+    grid-area: footer;
+    width: 80%;
+    margin: auto;
+}
+
+
+.container-footer {
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+#reseña {
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.footer-logo {
+    margin-bottom: 15px;
+    max-width: 180px;
+}
+
+.footer {
+    background-color: #f8b1b0;
+    padding: 50px 0;
+}
+
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    width: 25%;
+    padding: 15px 15px;
+
+}
+
+.footer-links:last-child {
+    margin-left: auto;
+}
+
+.footer-links h4 {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid oldlace;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.footer-links ul li a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: rgb(144, 139, 142);
+    padding-left: 6px;
+
+}
+
+.footer-links li {
+    list-style: none;
+}
+
+@media (max-width: 991px) {
+    .footer-row {
+        text-align: center;
+    }
+
+    .footer-links {
+        width: 100%;
+        margin-bottom: 30px;
+    }   
+}
+
+.social-media {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 30px 30px 0 30px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.social-media a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: #f8b1b0;
+    margin: 10px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+
+.social-media a:hover {
+    background-color: #737373;
+}
+
+.copyrigth {
+    font-size: 12px;
+    background-color: #fff;
+    color: #7e7e7e;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 15px 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+}
+
+.whatsapp-link .whatsapp-img {
+    width: 70px;
+    height: auto;
+    transition: filter 0.3s ease;
+
+}
+
+.whatsapp-link:hover .whatsapp-img {
+    width: 70px;
+    height: auto;
+    filter: hue-rotate(90deg);
+    filter: grayscale(100%);
+
+}
+
+.contenedorT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: animarFondo 10s infinite alternate;
+
+}
+
+@keyframes animarFondo {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
 }
