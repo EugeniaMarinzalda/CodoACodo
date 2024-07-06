@@ -22,10 +22,10 @@ async function validarUsuario(nombre,password){
     const user = users.find(user => user.nombre === nombre && user.password === password);
     if(user){
         if(user.rol === 'admin'){
-            sessionStorage.setItem('admin',true);
+            localStorage.setItem('user',nombre);
             window.location.href = "admin.html";
         }else{
-            localStorage.setItem('user',usuario.value);
+            localStorage.setItem('user',nombre);
             redireccionar();    
         };
     }else{

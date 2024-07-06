@@ -28,7 +28,32 @@ document.addEventListener('DOMContentLoaded', function () {
             window.location.href = 'index.html';
         });
     } 
-
+    const nav = document.querySelector('.nav');
+    nav.remove();
+    const select = `<select id="options">
+            <option value="user">Usuarios</option>
+            <option value="trat">Tratamientos</option>
+        </select>`;
+    const headerContainer = document.getElementById('header-container');
+    headerContainer.innerHTML += select; 
+    const options = document.querySelector('#options');
+    const vueUser = document.querySelector('#vue-user');
+    const vueTrat = document.querySelector('#app');
     
+    function seleccionar(){
+        const valor = options.value;
+        if(valor == "user"){
+            vueUser.style.display = "block";
+            vueTrat.style.display = "none";
+        }else{
+            vueTrat.style.display = "block";
+            vueUser.style.display = "none";
+        };
+    };
+    
+    options.onchange = seleccionar;
+    
+    seleccionar();
 });
+
 
