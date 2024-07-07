@@ -24,31 +24,34 @@
       <form id="formulario">
         <h2>Editar Tratamiento</h2>
         <br>
+        
         <div class="mb-3">
-          <label for="id">Id</label>
+          <label for="id"style="color:#737373">Id</label>
           <input type="number" name="id" id="id" disabled v-model="id">
         </div>
         <div class="mb-3">
-          <label for="nombre">Nombre</label>
+          <label for="nombre"style="color:#737373">Nombre</label>
           <input type="text" name="nombre" id="nombre" v-model="nombre">
         </div>
         <div class="mb-3">
-          <label for="descripcion">Descripción</label>
+          <label for="descripcion"style="color:#737373">Descripción</label>
           <input type="text" name="descripcion" id="descripcion" v-model="descripcion">
         </div>
         <div class="mb-3">
-          <label for="duracion">Duración</label>
+          <label for="duracion"style="color:#737373">Duración</label>
           <input type="text" name="duracion" id="duracion" v-model="duracion">
         </div>
         <div class="mb-3">
-          <label for="dia_semana">Días</label>
+          <label for="dia_semana"style="color:#737373">Días</label>
           <input type="text" name="dia_semana" id="dia_semana" v-model="dia_semana">
         </div>
         <div class="mb-3">
-          <label for="hora">Horario</label>
+          <label for="hora"style="color:#737373">Horario</label>
           <input type="text" name="hora" id="hora" v-model="hora">
         </div>
-        <br>
+        
+        
+
         <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
       </form>
     </div>

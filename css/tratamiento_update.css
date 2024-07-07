@@ -8,13 +8,9 @@
     font-style: normal;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", serif;
+    color: #737373;
 }
 
 body {
@@ -227,7 +223,10 @@ nav {
     border: 1px solid #ccc;
 }
 
-
+#formulario .mb-3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;}
 
 
 #formulario {
@@ -242,6 +241,17 @@ nav {
     width: 100%; /* Hace que los inputs ocupen todo el ancho del formulario */
     padding: 10px; /* Agrega un poco de padding para mejorar la apariencia */
     box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho total del input */
+    width: calc(100% - 25px); 
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 35px;
+    font-size: 16px;
+    float: left; 
+    outline: none; 
+    background-color: #fff; 
+    transition: background-color 0.3s; 
+    transition: border-color 0.3s;
+
 }
 
 .btn-success {
@@ -251,12 +261,12 @@ nav {
     color: #fff;
     border: none; /* Elimina el borde del botón */
     font-size: 18px;
-    border-radius: 5px; /* Opcional: redondea las esquinas del botón para que coincida con el formulario */
+    border-radius: 15px; /* Opcional: redondea las esquinas del botón para que coincida con el formulario */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
 }
 
 .btn-success:hover {
     background-color: #fff;
-    color: #f8b1b0;
-    border: none; /* Asegura que el borde siga sin aparecer en el estado hover */
+    color: #6a6a6a;
+    border-color:#f8b1b0;
 }
