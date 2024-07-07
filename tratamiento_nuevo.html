@@ -14,9 +14,7 @@
         <link rel="stylesheet" href="./css/tratamiento_update.css">
 </head>
 <body>
-  <header id="header-container">
-    <!-- lugar para la barra de navegación -->
-</header>
+ 
   <main>
     <div class="container" id="app">
        <form id="formulario">
@@ -42,9 +40,12 @@
           <label for="hora" style="color:#737373">Horarios</label>
           <input type="text" name="hora" id="hora" v-model="hora">
         </div>
+        <div class="botonera">
         
-        
-          <button type="button" class="btn btn-success" v-on:click="grabar()">Grabar</button>
+          <button type="button" class="grabar" v-on:click="grabar()">Grabar</button>
+          <a href="./tratamientos.html" class="volver">Volver</a>
+        </div>
+
       </form>
     </div>
   </main>
