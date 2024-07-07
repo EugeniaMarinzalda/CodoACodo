@@ -15,12 +15,13 @@
 </head>
 
 <body>
-  <header id="header-container">
-    <!-- lugar para la barra de navegación -->
-</header>
+ 
 
   <main>
     <div class="container" id="app">
+
+
+
       <form id="formulario">
         <h2>Editar Tratamiento</h2>
         <br>
@@ -50,10 +51,17 @@
           <input type="text" name="hora" id="hora" v-model="hora">
         </div>
         
-        
-
-        <button type="button" class="btn btn-success" v-on:click="modificar()">Grabar</button>
+        <div class="botonera">
+          
+          <button type="button" class="grabar" v-on:click="modificar()">Grabar</button>
+          <a href="./tratamientos.html" class="volver">Volver</a>
+        </div>
       </form>
+
+      
+      </div>
+
+      
     </div>
   </main>
 

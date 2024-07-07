@@ -8,265 +8,119 @@
     font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Playfair Display", serif;
     color: #737373;
 }
 
 body {
-    display: grid;
-    grid-template-areas: "header" "main" "footer";
-    grid-template-columns: 1fr;
+    margin: 0;
+    padding: 0;
     background-color: #fee2e2;
 }
 
-main {
-    background-color: rgb(255, 255, 255);
-    grid-area: main;
-    width: 80%;
-    overflow: hidden;
-    margin: 20px auto;
-    border-radius: 15px;
-    box-shadow: #797777;
-
-
-
-
-
-}
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-bottom: .7rem;
-    background-color: #ffffff;
-    grid-area: header;
-    width: 80%;
-    margin: auto;
-    color: rgb(0, 0, 0);
-    position: sticky;
-    top: 0;
-    z-index: 2;
-}
-
-header .logo {
-    width: 200px;
-    margin-right: auto;
-}
-
-nav {
-    overflow: hidden;
-}
-
-.login-text {
-    color: #ffffff;
-}
-
-.login-text:hover {
-    color: #7e7e7e;
-}
-
-.btn {
-    background-color: #f6b4b1;
-    border-radius: 10px;
-    transition: all 0.5s ease;
-    display: flex;
-    align-items: center;
-}
-
-.btn:hover {
+.container {
+    max-width: 650px;
+    margin: 50px auto;
     background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
 }
 
-.btn .login-icon {
-    display: none;
+
+.back-to-home-container {
+    text-align: right;
 }
 
-.nav-list {
-    list-style-type: none;
-    display: flex;
-    gap: 0.7rem;
-}
-
-.nav-list a {
-    display: flex;
-    font-size: 1em;
-    text-decoration: none;
-    color: #ffffff;
-    padding: 10px;
-}
-
-.nav-list a:hover {
+.back-to-home {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
     color: #f8b1b0;
-    border: 1px solid #f8b1b0;
-    border-radius: .5rem;
-}
-
-.abrir-menu {
-    display: none;
-}
-
-.cerrar-menu {
-    display: none;
-}
-
-#boton-registro {
-    background-color: #f8b1b0;
-    color: #fff;
-    border-radius: 10px;
+    font-size: 24px;
     transition: all 0.5s ease;
+
 }
 
-#boton-registro:hover {
-    background-color: #fff;
-    color: #f8b1b0;
+.back-to-home:hover {
+    color: #737373;
+    opacity: 35%;
 }
 
-
-@media screen and (max-width: 600px) {
-    header,
-    main,
-    footer,
-    .footer {
-        width: 100%;
-    }
-
-    #firstname, #lastname, #birthdate, #email, #sucursalform, #query, #image{
-        background-color: #ffffff;
-        border: none;
-    }
-
-    .abrir-menu,
-    .cerrar-menu {
-        display: block;
-        border: 0;
-        font-size: 1.8rem;
-        background-color: transparent;
-        cursor: pointer;
-        color: rgb(86, 86, 86);
-    }
-
-    .nav {
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        position: absolute;
-        gap: 1rem;
-        top: 0;
-        right: 0;
-        background-color: #f8b1b0;
-        color: #ffffff;
-        padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.25);
-        overflow: hidden;
-        transition: height 1s ease;
-        line-height: 2rem;
-    }
-
-    .nav.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        align-items: end;
-        color: rgb(255, 255, 255);
-    }
-
-    .nav-list a {
-        color: #ffffff;
-    }
-
-    .nav-list a:hover {
-        color: #797777;
-        border: none;
-    }
-}
-
-/* Media query para pantallas de tamaño de tabletas (entre 600px y 1024px) */
-@media screen and (min-width: 600px) and (max-width: 1024px) {
-    .login-text {
-        display: none;
-    }
-
-    .btn .login-icon {
-        display: inline;
-        color: #ffffff;
-        font-size: 1.2rem;
-    }
-
-    .btn {
-        padding: 0.5rem;
-    }
-
-    .btn:hover .login-icon {
-        color: #7e7e7e;
-    }
-
-    .btn:active .login-icon,
-    .btn:focus .login-icon {
-        color: #7e7e7e;
-    }
-}
-
-.nav-select {
-    
-    padding: 5px;
-    font-size: 14px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-}
 
 #formulario .mb-3 {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em;}
+    margin-bottom: 1em;
+}
 
 
 #formulario {
-    background-color: #f9f9f9;
+
     border-radius: 15px;
-    margin: 10px auto; 
-    width: 800px; 
-    padding: 20px;
+    margin: 10px auto;
+    width: 600px;
+    padding: 10px;
+
 }
 
 #formulario input {
-    width: 100%; /* Hace que los inputs ocupen todo el ancho del formulario */
-    padding: 10px; /* Agrega un poco de padding para mejorar la apariencia */
-    box-sizing: border-box; /* Asegura que el padding y el borde estén incluidos en el ancho total del input */
-    width: calc(100% - 25px); 
+    width: 100%;
+    /* Hace que los inputs ocupen todo el ancho del formulario */
+    padding: 10px;
+    /* Agrega un poco de padding para mejorar la apariencia */
+    box-sizing: border-box;
+    /* Asegura que el padding y el borde estén incluidos en el ancho total del input */
+    width: calc(100% - 25px);
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 35px;
     font-size: 16px;
-    float: left; 
-    outline: none; 
-    background-color: #fff; 
-    transition: background-color 0.3s; 
+    float: left;
+    outline: none;
+    background-color: #fff;
+    transition: background-color 0.3s;
     transition: border-color 0.3s;
 
 }
 
-.btn-success {
-    background-color: #f8b1b0;
-    margin-top: 10px;
-    padding: 15px;
-    color: #fff;
-    border: none; /* Elimina el borde del botón */
-    font-size: 18px;
-    border-radius: 15px; /* Opcional: redondea las esquinas del botón para que coincida con el formulario */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+
+
+.botonera {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones equitativamente */
+    gap: 20px; /* Espacio entre los botones */
+    margin: 20px auto;
+    width: 60%;
 }
 
-.btn-success:hover {
+.volver, .grabar {
+    flex: 1; /* Hace que ambos botones tengan el mismo tamaño */
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+.volver:hover, .grabar {
+    color: #fff;
+    background-color: #f8b1b0;
+    border-color:  #f8b1b0;
+}
+
+.volver, .grabar:hover {
     background-color: #fff;
-    color: #6a6a6a;
-    border-color:#f8b1b0;
+    color: #f8b1b0;
+    border-color: #ccc;
 }
