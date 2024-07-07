@@ -73,6 +73,8 @@ async function grabar(event) {
         } else{
         
         alert("Registro grabado");
+        localStorage.setItem('user',user.value);
+        localStorage.setItem('rol','user');
         window.location.href = "ofertateturno.html";
         
         };

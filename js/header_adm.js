@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         </nav>`;
 
     headerContainer.innerHTML = headerHtml;
-
+    
     // Verificar estado de sesión y actualizar texto del enlace de inicio de sesión
     const loginLink = document.getElementById('login-link');
     const loginText = document.getElementById('login-text');
@@ -35,7 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
         loginText.innerHTML = `Cerrar Sesión`;
 
         loginLink.addEventListener('click', function () {
-            localStorage.removeItem('user'); 
+            localStorage.removeItem('user');
+            localStorage.removeItem('rol'); 
             window.location.href = 'index.html';
         });
         
@@ -56,6 +57,11 @@ document.addEventListener('DOMContentLoaded', function () {
     cerrarMenuBtn.addEventListener('click', function () {
         nav.classList.remove('visible');
     });
+    
+    if(localStorage.getItem("rol") == "user"){
+        const navSelect = document.querySelector('.nav-select');
+        navSelect.remove();
+    };
 
     // Desplazamiento suave del scroll para enlaces internos en index.html
     if (window.location.pathname.includes('index.html')) {

@@ -23,10 +23,11 @@ async function validarUsuario(nombre,password){
     if(user){
         if(user.rol === 'admin'){
             localStorage.setItem('user',nombre);
-            window.location.href = "ofertateturno.html";
+            window.location.href = "admin.html";
         }else{
             localStorage.setItem('user',nombre);
-            redireccionar();    
+            localStorage.setItem('rol',user.rol);
+            window.location.href = "ofertateturno.html";    
         };
     }else{
         document.getElementById("validar_usuario").innerHTML = "Usuario inexistente o datos mal ingresados. Reintente";
