@@ -8,7 +8,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            url: "http://pysebas.pythonanywhere.com/usuarios/" + id,
+            url: "https://pysebas.pythonanywhere.com/usuarios/" + id,
             nombre: '',
             email: '',
             password: '',
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     async function dataFetch() {
         try {
-            const url = "http://pysebas.pythonanywhere.com/usuarios/" + id;
+            const url = "https://pysebas.pythonanywhere.com/usuarios/" + id;
             const res = await fetch(url);
             if (!res.ok) {
                 throw new Error('Mala respuesta de red');
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     async function modificar() {
         try {
-            const url = "http://pysebas.pythonanywhere.com/usuarios/" + id;
+            const url = "https://pysebas.pythonanywhere.com/usuarios/" + id;
             let usuario = {
                 nombre: document.getElementById('nombre').value,
                 email: document.getElementById('email').value,

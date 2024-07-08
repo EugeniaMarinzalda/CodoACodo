@@ -4,7 +4,7 @@ createApp({
     data() {
         return {
             usuarios: [],
-            url: "http://pysebas.pythonanywhere.com/usuarios",
+            url: "https://pysebas.pythonanywhere.com/usuarios",
             error: false,
             cargando: true,
         };
@@ -17,7 +17,7 @@ createApp({
     methods: {
         async dataFetch() {
             try {
-                const res = await fetch("http://pysebas.pythonanywhere.com/usuarios");
+                const res = await fetch("https://pysebas.pythonanywhere.com/usuarios");
                 if (!res.ok) {
                     throw new Error('mala respuesta de red');
                 }

@@ -65,7 +65,7 @@ async function grabar(event) {
         redirect: 'follow'
         };
     
-        const res = await fetch("http://pysebas.pythonanywhere.com/usuarios", options);
+        const res = await fetch("https://pysebas.pythonanywhere.com/usuarios", options);
     
         if (!res.ok){
         throw new Error(`Error:${res.status}`);

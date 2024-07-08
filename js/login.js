@@ -9,7 +9,7 @@ loginForm.onsubmit = login;
 
 async function dataFetch(){
     try{
-        const response = await fetch("http://pysebas.pythonanywhere.com/usuarios");
+        const response = await fetch("https://pysebas.pythonanywhere.com/usuarios");
         const users = await response.json();
         return users;  
     }catch(error){
