@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    background-color: #fef5f5;
+}
+
+.card {
+    width: 220px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 380px; /* Altura fija para todas las tarjetas */
+    position: relative; /* Añadido para la correcta posición del header */
+}
+
+.card-header {
+    background-color: #f8b1b0;
+    height: 10px; /* Ajusta la altura según lo necesites */
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: absolute; /* Hace que se posicione relativo a la tarjeta */
+    top: 0;
+    left: 0;
+}
+
+.card-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding-top: 23px; /* Ajusta el padding superior según la altura del header */
+}
+.card-body p {
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 10px 0; /* Ajusta el padding superior e inferior según necesites */
+    border-bottom: 1px solid #ddd; /* Línea fina entre los ítems */
+}
+
+.card-body p:last-of-type {
+    border-bottom: none; /* Elimina la línea inferior del último ítem */
+}
+
+.card-title {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+    color: #f8b1b0;
+}
+.bold-label {
+    font-weight: bold;
+}
+
+.card-text {
+    margin-bottom: 10px;
+    color: #555;
+    text-align: left;
+}
+
+.card button {
+    background-color: #f8b1b0;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.1em;
+    margin-top: auto; /* Empuja el botón hacia el fondo del contenedor */
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #565656;
+}
+
+.spinner-border {
+    border: 0.2em solid #f3f3f3;
+    border-top: 0.2em solid #ef9291;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+.foto_titulo{
+    width: 200px;
+    
+}
+#presentacion {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.imagen-home {
+    flex: 0 0 auto; /* Evita que la imagen crezca o se encoja */
+    margin-right:150px; /* Ajusta el margen derecho para espacio */
+}
+
+.texto {
+    flex: 1 1 0%; /* Permite que el texto ocupe el espacio restante */
+}
+
+@media (max-width: 768px) {
+    #presentacion {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        text-align: center;
+    }
+    .imagen-home {
+        margin-right: 0;
+        margin-bottom: 20px; /* Espacio entre imagen y texto en móviles */
+    }
+}
+
+
+
+#titulo_turnos {
+    font-size: 3rem;
+    text-align: left;
+}
+
+#usuario {
+    font-size: 3rem;
+}

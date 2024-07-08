@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <title>Editar Tratamiento</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="./css/tratamiento_update.css">
+</head>
+
+<body>
+ 
+
+  <main>
+    <div class="container" id="app">
+
+
+
+      <form id="formulario">
+        <h2>Editar Tratamiento</h2>
+        <br>
+        
+        <div class="mb-3">
+          <label for="id"style="color:#737373">Id</label>
+          <input type="number" name="id" id="id" disabled v-model="id">
+        </div>
+        <div class="mb-3">
+          <label for="nombre"style="color:#737373">Nombre</label>
+          <input type="text" name="nombre" id="nombre" v-model="nombre">
+        </div>
+        <div class="mb-3">
+          <label for="descripcion"style="color:#737373">Descripción</label>
+          <input type="text" name="descripcion" id="descripcion" v-model="descripcion">
+        </div>
+        <div class="mb-3">
+          <label for="duracion"style="color:#737373">Duración</label>
+          <input type="text" name="duracion" id="duracion" v-model="duracion">
+        </div>
+        <div class="mb-3">
+          <label for="dia_semana"style="color:#737373">Días</label>
+          <input type="text" name="dia_semana" id="dia_semana" v-model="dia_semana">
+        </div>
+        <div class="mb-3">
+          <label for="hora"style="color:#737373">Horario</label>
+          <input type="text" name="hora" id="hora" v-model="hora">
+        </div>
+        
+        <div class="botonera">
+          
+          <button type="button" class="grabar" v-on:click="modificar()">Grabar</button>
+          <a href="./tratamientos.html" class="volver">Volver</a>
+        </div>
+      </form>
+
+      
+      </div>
+
+      
+    </div>
+  </main>
+
+ 
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/tratamiento_editar.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/header_adm.js"></script> <!-- Tu archivo Vue -->
+</body>
+
+</html>

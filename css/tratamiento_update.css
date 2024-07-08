@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Playfair Display", serif;
+    color: #737373;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fee2e2;
+}
+
+.container {
+    max-width: 650px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+
+.back-to-home-container {
+    text-align: right;
+}
+
+.back-to-home {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    color: #f8b1b0;
+    font-size: 24px;
+    transition: all 0.5s ease;
+
+}
+
+.back-to-home:hover {
+    color: #737373;
+    opacity: 35%;
+}
+
+
+#formulario .mb-3 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+
+#formulario {
+
+    border-radius: 15px;
+    margin: 10px auto;
+    width: 600px;
+    padding: 10px;
+
+}
+
+#formulario input {
+    width: 100%;
+    /* Hace que los inputs ocupen todo el ancho del formulario */
+    padding: 10px;
+    /* Agrega un poco de padding para mejorar la apariencia */
+    box-sizing: border-box;
+    /* Asegura que el padding y el borde estén incluidos en el ancho total del input */
+    width: calc(100% - 25px);
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 35px;
+    font-size: 16px;
+    float: left;
+    outline: none;
+    background-color: #fff;
+    transition: background-color 0.3s;
+    transition: border-color 0.3s;
+
+}
+
+
+
+.botonera {
+    display: flex;
+    justify-content: space-between; /* Distribuye los botones equitativamente */
+    gap: 20px; /* Espacio entre los botones */
+    margin: 20px auto;
+    width: 60%;
+}
+
+.volver, .grabar {
+    flex: 1; /* Hace que ambos botones tengan el mismo tamaño */
+    display: inline-block;
+    padding: 10px 15px;
+    border: 1px solid;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+.volver:hover, .grabar {
+    color: #fff;
+    background-color: #f8b1b0;
+    border-color:  #f8b1b0;
+}
+
+.volver, .grabar:hover {
+    background-color: #fff;
+    color: #f8b1b0;
+    border-color: #ccc;
+}

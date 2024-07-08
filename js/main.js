@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (localStorage.getItem('user')) {
         loginText.innerHTML = `${localStorage.getItem('user')}`;
-        loginLink.href = 'ofertateturno.html'; 
+        loginLink.href = 'admin.html'; 
     } else {
         loginText.innerHTML = `Iniciar Sesión`;
         loginLink.href = 'registro.html'; 

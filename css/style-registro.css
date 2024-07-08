@@ -52,7 +52,8 @@ body {
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+select {
     width: calc(100% - 25px); 
     padding: 10px;
     border: 2px solid #ccc;
@@ -111,39 +112,36 @@ input[type="password"]::placeholder {
 
 }
 
-.registrarse{
-    background-color: #f8b1b0;
-    color: #fff;
-    border: none;
-    border-radius: 35px;
-    padding: 10px 15px;
+.registrarse, .volver, .grabar {
+    display: block;
+    margin: auto; 
+    text-align: center; 
+    width: 60%;
+    padding: 10px 15px; 
+    border: 1px solid;
+    border-radius: 20px;
     font-size: 14px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 }
- .registrarse:hover{
+
+.registrarse, .volver:hover, .grabar {
+    color: #fff;
+    background-color: #f8b1b0;
+    border-color:  #f8b1b0;
+}
+
+.registrarse:hover, .volver, .grabar:hover {
     background-color: #fff;
     color: #f8b1b0;
-    border: 2px solid  #f8b1b0 ;
- }
-
+    border-color: #ccc;
+}
 
 .form-volver {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    width: 40%;
 }
 
-.volver{
-    background-color: #fff;
-    color: #f8b1b0;
-    border: none;
-    border-radius: 35px;
-    padding: 10px 15px;
-    font-size: 14px;
-    transition: all .5s ease;
+#evento {
+    margin: 20px auto;
+    text-align: center;
 }
- .volver:hover{
-    background-color: #f8b1b0;
-    color: #fff;
-    border: 2px solid  #f8b1b0 ;
- }
-

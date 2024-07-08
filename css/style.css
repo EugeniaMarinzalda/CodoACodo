@@ -32,6 +32,7 @@ main {
     width: 80%;
     overflow: hidden;
     margin: auto;
+    box-shadow: #797777;
 }
 
 /* --------Header-------- */
@@ -65,6 +66,7 @@ nav {
 
 .login-text {
     color: #ffffff;
+    text-align: center;
 }
 
 .login-text:hover {
@@ -229,13 +231,14 @@ nav {
     flex-wrap: wrap;
 }
 
-.texto,
-.imagen-home {
+.texto
+{
     flex: 1 1 100%;
 }
 
 .imagen-home {
     margin-top: 20px;
+    width: 400px;
 }
 
 @media (min-width: 768px) {
@@ -1001,6 +1004,3 @@ footer {
          
     }
 }
-
-
-

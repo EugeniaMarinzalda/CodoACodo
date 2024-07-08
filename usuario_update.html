@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar usuario</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/style-registro.css">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <section id="app" class="form-wrapper">
+
+        <div class="back-to-home-container">
+            <button onclick="redireccionar()" class="back-to-home"><i class="fa-solid fa-circle-xmark"></i></button>
+        </div>
+
+        <form id="login-form" class="form-content">
+
+            <h2>Editar Usuario</h2>
+            <br>
+
+            <div class="form-control">
+                <input type="text" name="nombre" id="nombre" placeholder="Usuario" v-model="nombre">
+            </div>
+
+            <div class="form-control">
+                <input type="text" name="email" id="email" v-model="email" placeholder="Correo Electronico">
+            </div>
+
+            <div class="form-control">
+                <input type="text" name="password" id="password" v-model="password" placeholder="Contraseña">
+            </div>
+
+            <div class="form-control">
+                <select name="rol" id="rol" v-model="rol">
+                    <option value="" disabled selected>Seleccionar rol</option>
+                    <option value="user">Usuario</option>
+                    <option value="admin">Administrador</option>
+                </select>
+            </div>
+
+            <button class="grabar" type="button" v-on:click="modificar()">Editar</button>
+
+
+        </form>
+
+        <div id="evento"></div>
+        
+        <div class="form-volver">
+            <a href="./index.html" class="volver">Volver</a>
+        </div>
+
+        <div class="form-help">
+            <a href="./index.html#contact">Necesitas ayuda?</a>
+        </div>
+
+    </section>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/usuario_editar.js"></script>
+
+</body>
+
+</html>

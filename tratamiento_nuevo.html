@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Tratamiento Nuevo</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="./css/tratamiento_update.css">
+</head>
+<body>
+ 
+  <main>
+    <div class="container" id="app">
+       <form id="formulario">
+        <h1>Alta de Tratamiento</h1>
+        <br>
+        <div class="mb-3">
+          <label for="nombre" style="color:#737373">Nombre</label>
+          <input type="text" name="nombre" id="nombre" v-model="nombre">
+        </div>
+        <div class="mb-3">
+          <label for="descripcion" style="color:#737373">Descripcion</label>
+          <input type="text" name="descripcion" id="descripcion" v-model="descripcion">
+        </div>
+        <div class="mb-3">
+          <label for="duracion" style="color:#737373">Duracion</label>
+          <input type="text" name="duracion" id="duracion" v-model="duracion">
+        </div>
+        <div class="mb-3">
+          <label for="dia_semana" style="color:#737373">Dias</label>
+          <input type="text" name="dia_semana" id="dia_semana" v-model="dia_semana">
+        </div>
+        <div class="mb-3">
+          <label for="hora" style="color:#737373">Horarios</label>
+          <input type="text" name="hora" id="hora" v-model="hora">
+        </div>
+        <div class="botonera">
+        
+          <button type="button" class="grabar" v-on:click="grabar()">Grabar</button>
+          <a href="./tratamientos.html" class="volver">Volver</a>
+        </div>
+
+      </form>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+ 
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/tratamiento.js"></script>
+  <script src="./js/header_adm.js"></script>
+</body>
+</html>
